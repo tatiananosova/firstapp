@@ -15,11 +15,17 @@
             <tr><th>Id</th><th>Наименование</th><th>Стоимость</th></tr>
             <tr th:each="product : ${products}">
                 <td th:text="${product.id}">...</td>
-                <td th:text="${product.name}">...</td>
+                <td th:text="${product.title}">...</td>
                 <td th:text="${product.cost}">...</td>
             </tr>
         </table>
     </div>
 </div>
+<form method="post" name="addProduct" action="/firstapp_war/product/add">
+    <input name="id"/>
+    <input name="title"/>
+    <input name="cost"/>
+    <input type="submit"/>
+</form>
 </body>
 </html>

@@ -20,6 +20,12 @@ public class ProductService {
         productRepository.add(product);
     }
 
+    public void add(int id, String title, int cost) {
+        log.debug("Adding product");
+        productRepository.add(id, title, cost);
+    }
+
+
     public List<Product> getProducts() {
         log.debug("All products");
         return productRepository.getProducts();

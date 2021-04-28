@@ -26,6 +26,10 @@ public class ProductRepository {
     public void add(Product product) {
         database.add(product);
     }
+
+    public void add(int id, String title, int cost) {
+        this.add(new Product(id, title, cost));
+    }
     public Product getProduct(int id) {
         return database.stream()
                 .filter(product -> product.getId() == id)
